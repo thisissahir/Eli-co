@@ -1,0 +1,187 @@
+/* ===== Eli & Co. Aesthetics — shared design system ===== */
+:root{
+  --bg:#FBFAF9;
+  --surface:#FFFFFF;
+  --ink:#2E2B2A;
+  --muted:#6B6664;
+  --line:#EAE7E4;
+  --grey:#EDECEA;
+  --pink:#E7B6C0;
+  --pink-tint:#FBF3F5;
+  --accent:#B05B74;
+  --blue:#CBDCE6;
+  --blue-tint:#F2F7F9;
+  --blue-deep:#5E8299;
+  --ground:#2E3A42;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,-apple-system,Arial,sans-serif;
+  --max:1160px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing:.3px}
+h1{font-size:clamp(42px,6.4vw,68px)}
+h2{font-size:clamp(30px,4.2vw,46px)}
+h3{font-size:23px}
+p{color:var(--muted);max-width:64ch}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--blue-deep);font-weight:500}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:16px 32px;border-radius:40px;font-weight:500;letter-spacing:.03em;font-size:14px;text-transform:uppercase;transition:filter .2s,transform .2s;cursor:pointer;border:0}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px)}
+.btn-ghost{background:transparent;border:1px solid var(--ink);color:var(--ink)}
+section{padding:90px 0}
+.center{text-align:center}
+.lead{font-size:18px;max-width:70ch}
+
+/* ---- Header ---- */
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--max);margin:0 auto}
+.logo{font-family:var(--serif);font-size:27px;letter-spacing:.5px}
+.nav-links{display:flex;gap:26px;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.nav-links a{color:var(--ink);padding-bottom:2px}
+.nav-links a.active{border-bottom:1.5px solid var(--accent)}
+.nav-cta{display:flex;gap:14px;align-items:center}
+.nav-phone{font-size:14px;color:var(--blue-deep);font-weight:500}
+@media(max-width:980px){.nav-links{display:none}.nav-phone{display:none}}
+
+/* ---- Page banner (subpages) ---- */
+.banner{background:var(--blue-tint);padding:64px 0 56px;border-bottom:1px solid var(--line)}
+.banner h1{font-size:clamp(38px,5.2vw,56px);margin:12px 0 10px}
+.banner p{max-width:60ch}
+
+/* ---- Hero (home) ---- */
+.hero{padding:0}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;min-height:min(82vh,720px)}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:64px 24px 64px max(24px,calc((100vw - var(--max))/2 + 24px));background:var(--surface)}
+.hero-copy h1{margin:16px 0 20px}
+.hero-copy .proof{font-size:17px;color:var(--ink);margin-bottom:30px;font-weight:300}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-media{background-image:url('https://static.glossgenius.com/public/salon/f2cbe6f654491d42d3233162bb1e9f68e62f4ba9/website_cover_image/306e8db8cefa79e73a8473f86044be1e.jpeg');background-size:cover;background-position:center;position:relative}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(231,182,192,.12),rgba(203,220,230,.12))}
+@media(max-width:880px){.hero-grid{grid-template-columns:1fr}.hero-media{min-height:320px;order:-1}}
+
+/* ---- Trust strip ---- */
+.trust{background:var(--ground);color:#fff;padding:28px 0}
+.trust .row{display:flex;justify-content:center;gap:52px;flex-wrap:wrap;align-items:center;text-align:center}
+.trust .stat{font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.75)}
+.trust .stat b{font-family:var(--serif);font-size:27px;display:block;color:#fff;font-weight:500;margin-bottom:2px}
+
+/* ---- Card grid ---- */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .22s,box-shadow .22s;display:block}
+.card:hover{transform:translateY(-5px);box-shadow:0 22px 46px rgba(94,130,153,.14)}
+.card .thumb{aspect-ratio:4/3;background-size:cover;background-position:center}
+.card .body{padding:24px 22px 26px}
+.card h3{margin-bottom:8px}
+.card p{font-size:14px}
+.card .more{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-top:14px;display:inline-block}
+
+/* ---- Split feature ---- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;background:var(--surface);border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+@media(max-width:820px){.split{grid-template-columns:1fr}}
+.split .media{background-size:cover;background-position:center;min-height:420px}
+.split .text{padding:56px 48px;display:flex;flex-direction:column;justify-content:center}
+@media(max-width:820px){.split .text{padding:40px 28px}}
+
+/* ---- Provider ---- */
+.providers{background:var(--blue-tint)}
+.prov-grid{display:grid;grid-template-columns:340px 1fr;gap:44px;margin-top:12px;align-items:center}
+@media(max-width:820px){.prov-grid{grid-template-columns:1fr}}
+.prov .photo{aspect-ratio:3/4;background-size:cover;background-position:center;border-radius:12px;box-shadow:0 20px 50px rgba(46,58,66,.14)}
+.prov .cred{color:var(--blue-deep);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:8px}
+.prov h2{margin-bottom:16px}
+
+/* ---- Team ---- */
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px;margin-top:12px;max-width:820px}
+@media(max-width:720px){.team-grid{grid-template-columns:1fr}}
+.member-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.member-card .ph{aspect-ratio:1/1;background:var(--grey);background-size:cover;background-position:center}
+.member-card .info{padding:26px 26px 30px}
+.member-card .cred{color:var(--blue-deep);font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;margin-bottom:6px}
+
+/* ---- Gallery ---- */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
+@media(max-width:820px){.gal{grid-template-columns:repeat(2,1fr)}}
+.gal .item{aspect-ratio:1/1;background-size:cover;background-position:center;border-radius:10px}
+
+/* ---- Service menu ---- */
+.svc-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.svc-nav a{font-size:12.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);border:1px solid var(--line);background:var(--surface);padding:9px 16px;border-radius:40px}
+.svc-nav a:hover{border-color:var(--accent);color:var(--accent)}
+.svc-cat{margin-top:56px}
+.svc-cat > h2{padding-bottom:12px;border-bottom:2px solid var(--pink);margin-bottom:8px}
+.svc-list{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+@media(max-width:820px){.svc-list{grid-template-columns:1fr}}
+.svc{display:flex;justify-content:space-between;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.svc .l{max-width:46ch}
+.svc .name{font-size:16px;color:var(--ink);font-weight:400}
+.svc .desc{font-size:13px;color:var(--muted);margin-top:4px;line-height:1.55}
+.svc .meta{text-align:right;white-space:nowrap}
+.svc .price{font-size:15px;color:var(--blue-deep);font-weight:600}
+.svc .dur{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+
+/* ---- Price/pkg cards ---- */
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+@media(max-width:900px){.pkg-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.pkg-grid{grid-template-columns:1fr}}
+.pkg{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:30px 26px;display:flex;flex-direction:column}
+.pkg h3{margin-bottom:6px}
+.pkg .price{font-family:var(--serif);font-size:30px;color:var(--ink);margin:6px 0}
+.pkg .save{display:inline-block;background:var(--pink-tint);color:var(--accent);font-size:12px;font-weight:600;padding:4px 12px;border-radius:40px;margin-bottom:14px}
+.pkg p{font-size:14px;flex:1}
+.pkg .btn{margin-top:20px;text-align:center}
+
+/* ---- Membership ---- */
+.member{background:linear-gradient(135deg,var(--pink),var(--blue));border-radius:18px;padding:64px 40px;text-align:center;position:relative;overflow:hidden}
+.member h2{color:var(--ground)}.member p{color:var(--ground);opacity:.82;margin:16px auto 28px}
+.member .eyebrow{color:var(--accent)}
+.member .btn{background:var(--ground);color:#fff}
+
+/* ---- Testimonials ---- */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:38px}
+@media(max-width:820px){.quotes{grid-template-columns:1fr}}
+.quote{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:30px}
+.quote .stars{color:var(--pink);letter-spacing:3px;font-size:14px}
+.quote p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.4;color:var(--ink);margin-top:12px}
+.quote .who{margin-top:16px;font-size:13px;color:var(--muted);font-family:var(--sans)}
+
+/* ---- FAQ ---- */
+.faqwrap{background:var(--pink-tint)}
+.faq details{border-bottom:1px solid var(--line);padding:22px 0}
+.faq summary{font-family:var(--serif);font-size:22px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent)}
+.faq details[open] summary::after{content:"–"}
+.faq p{margin-top:12px}
+
+/* ---- Contact / location ---- */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:820px){.loc{grid-template-columns:1fr}}
+.map{aspect-ratio:16/11;background:var(--grey);border-radius:14px;border:0;width:100%}
+.cform{display:grid;gap:14px;max-width:520px}
+.cform label{font-size:13px;letter-spacing:.03em;color:var(--muted)}
+.cform input,.cform textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:8px;font-family:var(--sans);font-size:15px;background:var(--surface);color:var(--ink)}
+.cform textarea{min-height:130px;resize:vertical}
+.hours{border-collapse:collapse;width:100%;max-width:360px;margin-top:10px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line);font-size:15px}
+.hours td:last-child{text-align:right;color:var(--muted)}
+
+/* ---- Footer ---- */
+footer{background:var(--ground);color:rgba(255,255,255,.78);padding:60px 0 96px}
+footer a{color:rgba(255,255,255,.78)}
+footer a:hover{color:#fff}
+.fcols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
+@media(max-width:820px){.fcols{grid-template-columns:1fr}}
+.fcols h4{font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:11px;color:#fff;margin-bottom:14px}
+.legal{margin-top:38px;font-size:12px;color:rgba(255,255,255,.5);line-height:1.7}
+
+/* ---- Sticky mobile book bar ---- */
+.bookbar{position:fixed;bottom:0;left:0;right:0;z-index:60;display:none;background:var(--surface);border-top:1px solid var(--line);padding:10px 14px;gap:10px}
+.bookbar a{flex:1;text-align:center;padding:14px;border-radius:40px;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.03em}
+.bookbar .call{border:1px solid var(--ink);color:var(--ink)}
+.bookbar .book{background:var(--accent);color:#fff}
+@media(max-width:980px){.bookbar{display:flex}}
