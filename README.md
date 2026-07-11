@@ -9,8 +9,7 @@ A static, multi-page site built with plain HTML and CSS — no build step requir
 | Page | File |
 | --- | --- |
 | Home | `index.html` |
-| About | `about.html` |
-| Team | `team.html` |
+| About & Team | `about.html` |
 | Services | `services.html` |
 | Packages | `packages.html` |
 | Memberships | `memberships.html` |
