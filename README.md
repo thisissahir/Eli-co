@@ -36,4 +36,4 @@ Any static host works (GitHub Pages, Netlify, Vercel, Cloudflare Pages). For **G
 
 ---
 
-Contact: 720-934-6167 · 44 Cook St, Suite 200, Denver, CO 80206 · [Book online](https://eliandco.glossgenius.com/book)
+Contact: 720-934-6167 · 44 Cook St, Suite 200, Denver, CO 80206 · [Book online](https://eliandco.glossgenius.com/services)
