@@ -88,10 +88,10 @@ header .logo{display:inline-flex;align-items:center;line-height:0}
 @media(max-width:880px){.hero-grid{grid-template-columns:1fr}.hero-media{min-height:320px;order:-1}}
 
 /* ---- Trust strip ---- */
-.trust{background:var(--ground);color:#fff;padding:28px 0}
+.trust{background:var(--blue);color:var(--ground);padding:28px 0}
 .trust .row{display:flex;justify-content:center;gap:52px;flex-wrap:wrap;align-items:center;text-align:center}
-.trust .stat{font-size:13px;letter-spacing:.04em;color:rgba(255,255,255,.75)}
-.trust .stat b{font-family:var(--serif);font-size:27px;display:block;color:#fff;font-weight:500;margin-bottom:2px}
+.trust .stat{font-size:13px;letter-spacing:.04em;color:rgba(46,58,66,.72)}
+.trust .stat b{font-family:var(--serif);font-size:27px;display:block;color:var(--ground);font-weight:500;margin-bottom:2px}
 
 /* ---- Card grid ---- */
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
