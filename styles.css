@@ -39,6 +39,9 @@ section{padding:90px 0}
 header{position:sticky;top:0;z-index:50;background:rgba(251,250,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--max);margin:0 auto}
 .logo{font-family:var(--serif);font-size:27px;letter-spacing:.5px}
+header .logo{display:inline-flex;align-items:center;line-height:0}
+.logo-img{height:50px;width:auto;display:block}
+@media(max-width:600px){.logo-img{height:40px}}
 .nav-links{display:flex;gap:26px;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
 .nav-links a{color:var(--ink);padding-bottom:2px}
 .nav-links a.active{border-bottom:1.5px solid var(--accent)}
