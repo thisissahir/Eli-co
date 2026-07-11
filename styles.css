@@ -42,11 +42,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,250,249,.92);backdro
 header .logo{display:inline-flex;align-items:center;line-height:0}
 .logo-img{height:96px;width:auto;display:block}
 @media(max-width:600px){.logo-img{height:72px}}
-.nav-links{display:flex;gap:26px;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.nav-links{display:flex;gap:30px;font-size:15.5px;letter-spacing:.04em;text-transform:uppercase}
 .nav-links a{color:var(--ink);padding-bottom:2px}
 .nav-links a.active{border-bottom:1.5px solid var(--accent)}
 .nav-cta{display:flex;gap:14px;align-items:center}
-.nav-phone{font-size:14px;color:var(--blue-deep);font-weight:500}
+.nav-cta .btn{font-size:15px}
+.nav-phone{font-size:16.5px;color:var(--blue-deep);font-weight:500}
 .nav-toggle{display:none}
 .burger{display:none}
 @media(max-width:980px){
