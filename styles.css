@@ -58,7 +58,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(251,250,249,.92);backdro
 .hero-copy h1{margin:16px 0 20px}
 .hero-copy .proof{font-size:17px;color:var(--ink);margin-bottom:30px;font-weight:300}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-media{background-image:url('https://static.glossgenius.com/public/salon/f2cbe6f654491d42d3233162bb1e9f68e62f4ba9/website_cover_image/306e8db8cefa79e73a8473f86044be1e.jpeg');background-size:cover;background-position:center;position:relative}
+.hero-media{background-image:url('landing-hero.jpg');background-size:cover;background-position:center;position:relative}
 .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(231,182,192,.12),rgba(203,220,230,.12))}
 @media(max-width:880px){.hero-grid{grid-template-columns:1fr}.hero-media{min-height:320px;order:-1}}
 
